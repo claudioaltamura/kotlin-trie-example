@@ -7,13 +7,11 @@ open class TrieSimple<Value> : Trie<Value> {
     override fun insert(key: String, value: Value) {
         var currentNode = root
         for (char in key) {
-            println("char: $char")
             if (currentNode.children[char] == null) {
                 currentNode.children[char] = Trie.Node()
             }
             currentNode = currentNode.children[char]!!
         }
-        println("currentNode: $currentNode")
         currentNode.value = value
     }
 
