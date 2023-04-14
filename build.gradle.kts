@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    application
 }
 
 group = "de.claudioaltamura"
@@ -12,6 +11,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.test {
@@ -20,8 +20,5 @@ tasks.test {
 
 kotlin {
     jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
+    jvmToolchain(17)
 }
