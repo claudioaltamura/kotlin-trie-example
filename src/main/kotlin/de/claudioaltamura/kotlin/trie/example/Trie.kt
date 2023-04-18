@@ -14,4 +14,5 @@ interface Trie<Value> {
 
     fun search(key: String): Value?
 
+    fun delete(key: String)
 }
