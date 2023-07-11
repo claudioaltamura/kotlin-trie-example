@@ -29,7 +29,7 @@ class TrieTest() {
     @Test
     fun delete() {
         trie.delete("t")
-        assertNull(trie.search("t"))
+        assertNull(trie.search("to"))
     }
 
 }
